@@ -13,13 +13,5 @@ pipeline {
         sh 'mvn package'
       }
     }
-    stage('Front-end') {
-      agent {
-        docker { image 'node:16-alpine' }
-      }
-      steps {
-        sh 'npm install'
-      }
-    }
   }
 }
